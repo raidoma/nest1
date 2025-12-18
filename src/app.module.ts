@@ -6,14 +6,12 @@ import { CookieController } from './producrs//cookie/cookie.controller';
 import { CookieService } from './producrs//cookie/cookie.service';
 import { ToppingsController } from './producrs//toppings/toppings.controller';
 import { ToppingsService } from './producrs//toppings/toppings.service';
-import { ProductsModule } from './products/products.module';
 
 @Module({
   imports: [
     MongooseModule.forRoot(
       'mongodb://root:cookieroot@localhost:27017/nest-chacras-opener?authSource=admin',
     ),
-    ProductsModule,
   ],
   controllers: [AppController, CookieController, ToppingsController],
   providers: [AppService, CookieService, ToppingsService],
