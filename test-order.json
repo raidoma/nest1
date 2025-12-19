@@ -1,0 +1,30 @@
+{
+    "customer": {
+        "name": "Vivien",
+        "email": "vivien@example.com",
+        "address": "123 Cookie Lane",
+        "city": "NestCity",
+        "state": "TS",
+        "zip": "12345",
+        "country": "France"
+    },
+    "products": {
+        "connect": [
+            "cookie-products",
+            "topping-products"
+        ]
+    },
+    "productsQuantity": {
+        "data": [
+            {
+                "id": "cookie-products",
+                "quantity": 5
+            },
+            {
+                "id": "topping-products",
+                "quantity": 2
+            }
+        ]
+    },
+    "total": 42.50
+}

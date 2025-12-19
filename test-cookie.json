@@ -1,0 +1,7 @@
+{
+    "name": "Choc Chip",
+    "price": 2.5,
+    "brownSugar": true,
+    "peanuts": false,
+    "stock": 50
+}

@@ -1,8 +1,23 @@
 import { Injectable } from '@nestjs/common';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
+import { Topping } from './toppings.schema';
+import { CreateToppingDto } from './toppings.dto';
 
 @Injectable()
 export class ToppingsService {
-    getToppings(){
-        return fetch('https://strapi-production-2ff5.up.railway.app/api/topping-products?populate=*',).then((response) => response.json());
+    constructor(@InjectModel(Topping.name) private toppingModel: Model<Topping>) { }
+
+    async create(createToppingDto: CreateToppingDto): Promise<Topping> {
+        const createdTopping = new this.toppingModel(createToppingDto);
+        return createdTopping.save();
+    }
+
+    async findAll(): Promise<Topping[]> {
+        return this.toppingModel.find().exec();
+    }
+
+    async findOne(id: string): Promise<Topping | null> {
+        return this.toppingModel.findById(id).exec();
     }
 }

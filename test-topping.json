@@ -1,0 +1,10 @@
+{
+    "name": "Sprinkles",
+    "category": "outside",
+    "price": 0.5,
+    "isVegetarian": true,
+    "isGlutenFree": true,
+    "hasNuts": false,
+    "calories": 50,
+    "stock": 100
+}
