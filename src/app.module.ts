@@ -6,12 +6,14 @@ import { CookieController } from './products/cookie/cookie.controller';
 import { CookieService } from './products/cookie/cookie.service';
 import { ToppingsController } from './products/toppings/toppings.controller';
 import { ToppingsService } from './products/toppings/toppings.service';
+import { OderModule } from './oder/oder.module';
 
 @Module({
   imports: [
     MongooseModule.forRoot(
       'mongodb://root:cookieroot@localhost:27017/nest-chacras-opener?authSource=admin',
     ),
+    OderModule,
   ],
   controllers: [AppController, CookieController, ToppingsController],
   providers: [AppService, CookieService, ToppingsService],
